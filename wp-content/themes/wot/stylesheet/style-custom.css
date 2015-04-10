@@ -1,15 +1,20 @@
 html.ltie9 body, body{ min-width: 1140px; } .container{ max-width: 1140px; } .gdlr-caption-wrapper .gdlr-caption-inner{ max-width: 1140px; }
 .body-wrapper.gdlr-boxed-style { max-width: 1220px; }
 .gdlr-navigation-wrapper .gdlr-navigation-container{ text-align: center; }
-.gdlr-logo{ max-width: 237px; }
+.gdlr-logo{ max-width: 150px; }
 .gdlr-logo{ margin-top: 45px; }
 .gdlr-logo{ margin-bottom: 50px; }
 .gdlr-logo-right-text{ margin-top: 50px; }
+.gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+body.single .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+body.single-portfolio .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+body.archive .gdlr-page-title-wrapper, body.search .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+body.error404 .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
 h1, h2, h3, h4, h5, h6{ font-family: "Open Sans"; }
 body, input, textarea{ font-family: "Open Sans"; }
 .gdlr-navigation{ font-family: "Open Sans"; }
 .gdlr-slider-item{ font-family: "Open Sans"; }
-body{ font-size: 14px; }
+body{ font-size: 16px; }
 h1{ font-size: 47px; }
 h2{ font-size: 41px; }
 h3{ font-size: 32px; }
@@ -45,9 +50,9 @@ h1, h2, h3, h4, h5, h6, .gdlr-title, .gdlr-title a{ color: #454545; }
 .gdlr-item-title-wrapper.pos-icon .gdlr-item-title-icon{ background-color: #393939; }
 .gdlr-item-title-gimmick{ background-color: #333333; }
 .gdlr-item-title-wrapper .gdlr-item-caption{ color: #9b9b9b; }
-body{ color: #808080; }
+body{ color: #0c0c0c; }
 a{ color: #3a3a3a; }
-a:hover{ color: #f5be3b; }
+a:hover{ color: #5749a8; }
 body *{ border-color: #e5e5e5; }
 .page-not-found-block{ background-color: #d65938; }
 .page-not-found-block{ color: #ffffff; }
@@ -72,7 +77,7 @@ body *{ border-color: #e5e5e5; }
 .gdlr-button{ border-color: #f5be3b; }.gdlr-button.without-border, input[type="button"], input[type="submit"]{ background-color: #f5be3b; }
 .column-service-title{ color: #292929; }
 .column-service-content{ color: #909090; }
-.column-service-icon i{ color: #fff; }
+.column-service-icon i{ color: #f5be3b; }
 .gdlr-column-service-item.gdlr-type-2 .column-service-icon{ background-color: #3e3e3e; }
 .gdlr-feature-media-item .feature-media-icon{ color: #ffffff; }
 .gdlr-feature-media-item .feature-media-icon{ background-color: #3d3d3d; }
@@ -259,47 +264,3 @@ html .woocommerce .quantity .minus, html .woocommerce #content .quantity .minus,
 .gdlr-skin-personnel-onepage .gdlr-item-title-gimmick{ background-color: #ffffff; }
 .gdlr-skin-personnel-onepage *, .gdlr-skin-personnel-onepage .gdlr-skin-border{ border-color: #ffffff; }
 .gdlr-skin-personnel-onepage .gdlr-button, .gdlr-skin-personnel-onepage .gdlr-button:hover, .gdlr-skin-personnel-onepage input[type="button"], .gdlr-skin-personnel-onepage input[type="submit"]{ color: #ffffff; border-color: #ffffff;  }
-
-
-/* -----------------------------------------------------------
-	WOT
--------------------------------------------------------------- */
-.menu {
-	list-style: none;
-	}
-	.menu li {
-		display: block;
-		float: left;
-		margin: 0 10px;
-		}
-		.menu li a {
-			text-transform: uppercase;
-		}
-
-#slider-text,
-.ls-slide h1 {
-	width: 100% !important;
-	left: 0 !important;
-	margin: 0 auto;
-	vertical-align: middle;
-	text-align: left;
-	color: #390065;
-	}
-	.ls-slide h1 .justify {
-		width: 65%;
-		margin: auto;
-	}
-	
-.icon-custom {
-	display: block;
-	position: relative;
-	top: -8px;
-	left: -5px;
-	width: 38px;
-	height: 44px;
-	background: url(/wp-content/themes/mediso-v1-03/images/sprite.png) 0 0 no-repeat;
-	}
-	.icon-custom-people { background-position: 2px -69px; }	
-	.icon-custom-networking { background-position: 0 0; }	
-	.icon-custom-award { background-position: 6px -142px; }	
-	

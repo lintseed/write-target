@@ -40,7 +40,7 @@
 							'tag'=>'Tag',
 							'category'=>'Category',
 							'comment'=>'Comment',
-							'author'=>'Author',
+						
 						),
 						'description'=> __('Select this to remove the meta data out of the post.<br><br>', 'gdlr_translate') .
 							__('You can use Ctrl/Command button to select multiple option or remove the selected option.', 'gdlr_translate')

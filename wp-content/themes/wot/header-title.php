@@ -35,15 +35,7 @@
 			$page_caption = $theme_option['post-caption'];
 		} 
 	?>
-		<div class="gdlr-page-title-wrapper" <?php echo $header_background; ?> >
-			<div class="gdlr-page-title-overlay"></div>
-			<div class="gdlr-page-title-container container" >
-				<h3 class="gdlr-page-title"><?php echo gdlr_text_filter($page_title); ?></h3>
-				<?php if( !empty($page_caption) ){ ?>
-				<span class="gdlr-page-caption"><?php echo gdlr_text_filter($page_caption); ?></span>
-				<?php } ?>
-			</div>	
-		</div>	
+		
 	<?php }else if( is_single() ){ // for custom post type
 		
 		$page_title = get_the_title();

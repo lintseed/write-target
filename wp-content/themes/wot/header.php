@@ -76,7 +76,7 @@
 							<div class="gdlr-nav-search-form" id="gdlr-nav-search-form">
 								<form method="get" action="<?php  echo home_url(); ?>">
 									<div class="search-text" id="search-text">
-										<input type="text" value="" name="s" id="s" autocomplete="off" data-default="<?php _e("Type keywords..." , "gdlr_translate"); ?>" >
+										<input type="text" value="" name="s" id="s" autocomplete="off" data-default="<?php _e("Search..." , "gdlr_translate"); ?>" >
 									</div>
 									<div class="gdlr-nav-search-form-button" id="gdlr-nav-search-form-button">
 										<i class="icon-search"></i>
