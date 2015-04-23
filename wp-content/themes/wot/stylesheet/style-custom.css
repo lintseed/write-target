@@ -5,7 +5,7 @@ html.ltie9 body, body{ min-width: 1140px; } .container{ max-width: 1140px; } .gd
 .gdlr-logo{ margin-top: 45px; }
 .gdlr-logo{ margin-bottom: 50px; }
 .gdlr-logo-right-text{ margin-top: 50px; }
-.gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+.gdlr-page-title-wrapper { background-image: url('http://writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
 body.single .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
 body.single-portfolio .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
 body.archive .gdlr-page-title-wrapper, body.search .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
@@ -21,6 +21,14 @@ h3{ font-size: 32px; }
 h4{ font-size: 26px; }
 h5{ font-size: 21px; }
 h6{ font-size: 16px; }
+.breadcrumbs {
+	margin: 0 auto 20px;
+	font: normal 12px "Open Sans", sans-serif;
+	text-transform: uppercase;
+}
+.single .breadcrumbs {
+	margin: 20px auto 0;
+}
 .top-navigation-wrapper, .gdlr-nav-search-form-button-wrapper{ border-color: #ebebeb; }
 .top-navigation-wrapper{ background-color: #ffffff; }
 .top-navigation-wrapper{ color: #8e8e8e; }

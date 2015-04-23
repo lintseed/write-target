@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 	<div class="gdlr-content">
-
+		
 		<!-- Above Sidebar Section-->
 		<?php global $gdlr_post_option, $above_sidebar_content, $with_sidebar_content, $below_sidebar_content; ?>
 		<?php if(!empty($above_sidebar_content)){ ?>
@@ -30,6 +30,7 @@
 		?>
 			<div class="with-sidebar-wrapper">
 				<div class="with-sidebar-container container">
+					
 					<div class="with-sidebar-left <?php echo $gdlr_sidebar['outer']; ?> columns">
 						<div class="with-sidebar-content <?php echo $gdlr_sidebar['center']; ?> columns">
 							<?php 

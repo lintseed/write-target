@@ -5,7 +5,6 @@
 	*	This file contains the function use to print the page buidler section
 	*	---------------------------------------------------------------------
 	*/
-
 	// printing the pagebuilder item
 	if( !function_exists('gdlr_get_page_builder') ){
 		function gdlr_print_page_builder($content, $full_width = true){
@@ -75,8 +74,15 @@
 					if( !$independent ){ echo '<div class="section-container container">'; } // open container
 					
 					$section[0] = ceil($section[0]) + $size; $section[1] = $independent;
-					$gdlr_section_id ++;
-				}else{
+					$gdlr_section_id ++; ?>
+					
+					<?php /* insert breadcrumbs below slideshow */ ?>
+					
+					<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+						<?php if(function_exists('bcn_display') && !is_front_page()) { bcn_display(); } ?>
+					</div>
+					
+				<?php }else{
 
 					if( abs((float)$section[0] - floor($section[0])) < 0.01 || 	// is integer or
 						(floor($section[0]) < floor($section[0] + $size - 0.01)) ){ 	// exceeding current line

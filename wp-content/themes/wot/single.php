@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <div class="gdlr-content">
-
+	<div class="breadcrumbs container" xmlns:v="http://rdf.data-vocabulary.org/#">
+		<?php if(function_exists('bcn_display') && !is_front_page()) { bcn_display(); } ?>
+	</div>
+		
 	<?php 
 		global $gdlr_sidebar, $theme_option;
 		if( empty($gdlr_post_option['sidebar']) || $gdlr_post_option['sidebar'] == 'default-sidebar' ){
