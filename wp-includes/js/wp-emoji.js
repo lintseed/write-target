@@ -4,6 +4,27 @@
 		var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver,
 
 		/**
+<<<<<<< HEAD
+=======
+		 * Flag to determine if the browser and the OS support emoji.
+		 *
+		 * @since 4.2.0
+		 *
+		 * @var Boolean
+		 */
+		supportsEmoji = false,
+
+		/**
+		 * Flag to determine if the browser and the OS support flag (two character) emoji.
+		 *
+		 * @since 4.2.0
+		 *
+		 * @var Boolean
+		 */
+		supportsFlagEmoji = false,
+
+		/**
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 		 * Flag to determine if we should replace emoji characters with images.
 		 *
 		 * @since 4.2.0
@@ -12,9 +33,16 @@
 		 */
 		replaceEmoji = false,
 
+<<<<<<< HEAD
 		// Private
 		twemoji, timer,
 		loaded = false,
+=======
+		isIE8 = window.navigator.userAgent.indexOf( 'IE 8' ) !== -1,
+
+		// Private
+		twemoji, timer,
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 		count = 0;
 
 		/**
@@ -23,10 +51,13 @@
 		 * @since 4.2.0
 		 */
 		function load() {
+<<<<<<< HEAD
 			if ( loaded ) {
 				return;
 			}
 
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 			if ( typeof window.twemoji === 'undefined' ) {
 				// Break if waiting for longer than 30 sec.
 				if ( count > 600 ) {
@@ -42,11 +73,15 @@
 			}
 
 			twemoji = window.twemoji;
+<<<<<<< HEAD
 			loaded = true;
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 
 			if ( MutationObserver ) {
 				new MutationObserver( function( mutationRecords ) {
 					var i = mutationRecords.length,
+<<<<<<< HEAD
 						addedNodes, removedNodes, ii, node;
 
 					while ( i-- ) {
@@ -65,15 +100,27 @@
 
 						while ( ii-- ) {
 							node = addedNodes[ ii ];
+=======
+						ii, node;
+
+					while ( i-- ) {
+						ii = mutationRecords[ i ].addedNodes.length;
+
+						while ( ii-- ) {
+							node = mutationRecords[ i ].addedNodes[ ii ];
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 
 							if ( node.nodeType === 3 ) {
 								node = node.parentNode;
 							}
 
+<<<<<<< HEAD
 							if ( ! node || ( node.className && node.className.indexOf( 'wp-exclude-emoji' ) !== -1 ) ) {
 								continue;
 							}
 
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 							if ( node && node.nodeType === 1 ) {
 								parse( node );
 							}
@@ -97,7 +144,11 @@
 		 * @param {Object} args Additional options for Twemoji.
 		 */
 		function parse( object, args ) {
+<<<<<<< HEAD
 			if ( ! replaceEmoji || ! twemoji ) {
+=======
+			if ( ! replaceEmoji ) {
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 				return object;
 			}
 
@@ -122,7 +173,11 @@
 							return false;
 					}
 
+<<<<<<< HEAD
 					if ( ! settings.supports.flag && settings.supports.simple &&
+=======
+					if ( ! supportsFlagEmoji && supportsEmoji &&
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 						! /^1f1(?:e[6-9a-f]|f[0-9a-f])-1f1(?:e[6-9a-f]|f[0-9a-f])$/.test( icon ) ) {
 
 						return false;
@@ -133,16 +188,41 @@
 			} );
 		}
 
+<<<<<<< HEAD
+=======
+		// Load when the readyState changes to 'interactive', not 'complete'.
+		function onLoad() {
+			if ( ( ! isIE8 && 'interactive' === document.readyState ) || ( isIE8 && 'complete' === document.readyState ) ) {
+				load();
+			}
+		}
+
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 		/**
 		 * Initialize our emoji support, and set up listeners.
 		 */
 		if ( settings ) {
+<<<<<<< HEAD
 			replaceEmoji = ! settings.supports.simple || ! settings.supports.flag;
 
 			if ( settings.DOMReady ) {
 				load();
 			} else {
 				settings.readyCallback = load;
+=======
+			supportsEmoji = window._wpemojiSettings.supports.simple;
+			supportsFlagEmoji = window._wpemojiSettings.supports.flag;
+			replaceEmoji = ! supportsEmoji || ! supportsFlagEmoji;
+
+			if ( ( ! isIE8 && 'loading' === document.readyState ) || ( isIE8 && 'complete' !== document.readyState ) ) {
+				if ( document.addEventListener ) {
+					document.addEventListener( 'readystatechange', onLoad, false );
+				} else if ( document.attachEvent ) {
+					document.attachEvent( 'onreadystatechange', onLoad );
+				}
+			} else {
+				load();
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 			}
 		}
 

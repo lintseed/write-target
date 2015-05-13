@@ -24,7 +24,7 @@ h6{ font-size: 16px; }
 .top-navigation-wrapper, .gdlr-nav-search-form-button-wrapper{ border-color: #ebebeb; }
 .top-navigation-wrapper{ background-color: #ffffff; }
 .top-navigation-wrapper{ color: #8e8e8e; }
-.top-navigation-wrapper a{ color: #7f7f7f; }
+.top-navigation-wrapper a{ color: #b5b5b5; }
 .gdlr-header-inner{ background-color: #ffffff; }
 .gdlr-main-menu > li > a{ color: #ffffff; }
 .gdlr-main-menu > li:hover > a, .gdlr-main-menu > li.current-menu-item > a, .gdlr-main-menu > li.current-menu-ancestor > a{ color: #f5be3b; }

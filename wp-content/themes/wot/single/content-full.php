@@ -28,7 +28,15 @@
 				<?php }else{ ?>
 					<h3 class="gdlr-blog-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<?php } ?>	
-					
+				
+				<?php 
+					// print blog information
+					if( is_single() && get_post_type() == 'post' ){
+						echo gdlr_get_blog_info(array('category', 'comment')); 
+					}else if( !is_single() ){
+						echo gdlr_get_blog_info($gdlr_post_settings['blog-info']);
+					}
+				?>			
 				<div class="clear"></div>
 			</header><!-- entry-header -->
 

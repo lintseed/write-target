@@ -1,5 +1,9 @@
 ( function( window, document, settings ) {
+<<<<<<< HEAD
 	var src, ready;
+=======
+	var src;
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 
 	/**
 	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
@@ -62,6 +66,7 @@
 		flag:   browserSupportsEmoji( 'flag' )
 	};
 
+<<<<<<< HEAD
 	settings.DOMReady = false;
 	settings.readyCallback = function() {
 		settings.DOMReady = true;
@@ -84,6 +89,9 @@
 			} );
 		}
 
+=======
+	if ( ! settings.supports.simple || ! settings.supports.flag ) {
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 		src = settings.source || {};
 
 		if ( src.concatemoji ) {

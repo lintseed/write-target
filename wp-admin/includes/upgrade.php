@@ -524,12 +524,15 @@ function upgrade_all() {
 	if ( $wp_current_db_version < 29630 )
 		upgrade_400();
 
+<<<<<<< HEAD
 	// Don't harsh my mellow. upgrade_422() must be called before
 	// upgrade_420() to catch bad comments prior to any auto-expansion of
 	// MySQL column widths.
 	if ( $wp_current_db_version < 31534 )
 		upgrade_422();
 
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 	if ( $wp_current_db_version < 31351 )
 		upgrade_420();
 
@@ -1442,6 +1445,7 @@ function upgrade_420() {
 }
 
 /**
+<<<<<<< HEAD
  * Execute changes made in WordPress 4.2.1.
  *
  * @since 4.2.1
@@ -1498,6 +1502,8 @@ function upgrade_422() {
 }
 
 /**
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
  * Executes network-level upgrade routines.
  *
  * @since 3.0.0
@@ -1600,15 +1606,23 @@ function upgrade_network() {
 			$wpdb->query( "ALTER TABLE $wpdb->usermeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191))" );
 			$wpdb->query( "ALTER TABLE $wpdb->site DROP INDEX domain, ADD INDEX domain(domain(140),path(51))" );
 			$wpdb->query( "ALTER TABLE $wpdb->sitemeta DROP INDEX meta_key, ADD INDEX meta_key(meta_key(191))" );
+<<<<<<< HEAD
 			$wpdb->query( "ALTER TABLE $wpdb->signups DROP INDEX domain_path, ADD INDEX domain_path(domain(140),path(51))" );
 
 			$tables = $wpdb->tables( 'global' );
 
+=======
+			$wpdb->query( "ALTER TABLE $wpdb->signups DROP INDEX domain, ADD INDEX domain(domain(140),path(51))" );
+
+			$tables = $wpdb->tables( 'global' );
+
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 			foreach ( $tables as $table ) {
 				maybe_convert_table_to_utf8mb4( $table );
 			}
 		}
 	}
+<<<<<<< HEAD
 
 	// 4.2.2
 	if ( $wp_current_db_version < 31535 && 'utf8mb4' === $wpdb->charset ) {
@@ -1627,6 +1641,8 @@ function upgrade_network() {
 			}
 		}
 	}
+=======
+>>>>>>> 3c97a521e358651cb1c2084e5ff494b19c026ba9
 }
 
 //
