@@ -159,7 +159,16 @@
 						$ret .= $category;					
 						$ret .= '</div>';					
 						break;
-					
+					case 'comment':
+						$ret .= '<div class="blog-info blog-comment"><i class="icon-comments"></i>';
+						$ret .= '<a href="' . get_permalink() . '#respond" >' . get_comments_number() . '</a>';						
+						$ret .= '</div>';						
+						break;
+					case 'author':
+						ob_start();
+						the_author_posts_link();
+						$author = ob_get_contents();
+						ob_end_clean();
 						
 						$ret .= '<div class="blog-info blog-author"><i class="icon-pencil"></i>';
 						$ret .= $author;
