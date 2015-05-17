@@ -175,7 +175,7 @@
 			echo '>';
 			echo '<div class="container">';
 			$size = 0; 
-			foreach( $content['items'] as g ){
+			foreach( $content['items'] as $item ){
 				if( $item['item-type'] == 'wrapper' ){
 					if( $size != 0 && abs($size - intval($size)) < 0.01 ){
 						echo '<div class="clear"></div>';
