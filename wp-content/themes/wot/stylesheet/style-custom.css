@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6{ font-family: "Open Sans"; }
 body, input, textarea{ font-family: "Open Sans"; }
 .gdlr-navigation{ font-family: "Open Sans"; }
 .gdlr-slider-item{ font-family: "Open Sans"; }
-body{ font-size: 16px; }
+body{ font-size: 14px; }
 h1{ font-size: 47px; }
 h2{ font-size: 41px; }
 h3{ font-size: 32px; }
@@ -27,7 +27,7 @@ h6{ font-size: 16px; }
 .top-navigation-wrapper a{ color: #b5b5b5; }
 .gdlr-header-inner{ background-color: #ffffff; }
 .gdlr-main-menu > li > a{ color: #ffffff; }
-.gdlr-main-menu > li:hover > a, .gdlr-main-menu > li.current-menu-item > a, .gdlr-main-menu > li.current-menu-ancestor > a{ color: #ffffff; }
+.gdlr-main-menu > li:hover > a, .gdlr-main-menu > li.current-menu-item > a, .gdlr-main-menu > li.current-menu-ancestor > a{ color: #f5be3b; }
 .gdlr-navigation-wrapper{ background-color: #282828; }
 .gdlr-main-menu > li:hover > a, .gdlr-main-menu > li.current-menu-item > a, .gdlr-main-menu > li.current-menu-ancestor > a{ background-color: #000000; }
 .gdlr-main-menu > .gdlr-normal-menu .sub-menu, .gdlr-main-menu > .gdlr-mega-menu .sf-mega{ border-top-color: #1b1b1b; }
@@ -50,9 +50,9 @@ h1, h2, h3, h4, h5, h6, .gdlr-title, .gdlr-title a{ color: #454545; }
 .gdlr-item-title-wrapper.pos-icon .gdlr-item-title-icon{ background-color: #393939; }
 .gdlr-item-title-gimmick{ background-color: #333333; }
 .gdlr-item-title-wrapper .gdlr-item-caption{ color: #9b9b9b; }
-body{ color: #0c0c0c; }
+body{ color: #808080; }
 a{ color: #3a3a3a; }
-a:hover{ color: #5749a8; }
+a:hover{ color: #f5be3b; }
 body *{ border-color: #e5e5e5; }
 .page-not-found-block{ background-color: #d65938; }
 .page-not-found-block{ color: #ffffff; }

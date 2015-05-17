@@ -27,12 +27,18 @@
 					$section = gdlr_print_section($section, $current_size, false);	
 				}
 				
+				if( $item['type'] == 'breadcrumb' ) {
+					$section = gldr_print_breadcrumbs();
+				}
+					
 				// start printing item
 				if( $item['item-type'] == 'wrapper' ){
 					if( $item['type'] == 'color-wrapper' ){
 						gdlr_print_color_wrapper( $item );
 					}else if(  $item['type'] == 'parallax-bg-wrapper'){
 						gdlr_print_parallax_wrapper( $item );
+					}else if(  $item['type'] == 'breadcrumb'){
+						gldr_print_breadcrumbs( $item );
 					}else if(  $item['type'] == 'full-size-wrapper'){
 						gdlr_print_full_size_wrapper( $item );
 					}else{
@@ -169,7 +175,7 @@
 			echo '>';
 			echo '<div class="container">';
 			$size = 0; 
-			foreach( $content['items'] as $item ){
+			foreach( $content['items'] as g ){
 				if( $item['item-type'] == 'wrapper' ){
 					if( $size != 0 && abs($size - intval($size)) < 0.01 ){
 						echo '<div class="clear"></div>';
@@ -276,6 +282,13 @@
 		}
 	}
 	
+	// print breadcrumbs
+	if ( function_exists('yoast_breadcrumb') ) {
+		function gldr_print_breadcrumbs() {
+			return yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+		}
+	}
+
 	// print full size wrapper
 	if( !function_exists('gdlr_print_full_size_wrapper') ){
 		function gdlr_print_full_size_wrapper( $content ){
