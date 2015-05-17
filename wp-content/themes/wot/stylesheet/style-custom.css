@@ -5,11 +5,11 @@ html.ltie9 body, body{ min-width: 1140px; } .container{ max-width: 1140px; } .gd
 .gdlr-logo{ margin-top: 45px; }
 .gdlr-logo{ margin-bottom: 50px; }
 .gdlr-logo-right-text{ margin-top: 50px; }
-.gdlr-page-title-wrapper { background-image: url('http://writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
-body.single .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
-body.single-portfolio .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
-body.archive .gdlr-page-title-wrapper, body.search .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
-body.error404 .gdlr-page-title-wrapper { background-image: url('http://dev.writetarget.com/wp-content/uploads/2015/03/careers1.jpg'); }
+.gdlr-page-title-wrapper { background-image: url('/wp-content/uploads/2015/03/careers1.jpg'); }
+body.single .gdlr-page-title-wrapper { background-image: url('/wp-content/uploads/2015/03/careers1.jpg'); }
+body.single-portfolio .gdlr-page-title-wrapper { background-image: url('/wp-content/uploads/2015/03/careers1.jpg'); }
+body.archive .gdlr-page-title-wrapper, body.search .gdlr-page-title-wrapper { background-image: url('/wp-content/uploads/2015/03/careers1.jpg'); }
+body.error404 .gdlr-page-title-wrapper { background-image: url('/wp-content/uploads/2015/03/careers1.jpg'); }
 h1, h2, h3, h4, h5, h6{ font-family: "Open Sans"; }
 body, input, textarea{ font-family: "Open Sans"; }
 .gdlr-navigation{ font-family: "Open Sans"; }
